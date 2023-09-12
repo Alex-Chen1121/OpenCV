@@ -1,14 +1,13 @@
 import cv2
 import numpy as np
 
-
 #圖片顏色偵測
 image=cv2.imread("kobe.jpg")
 image=cv2.resize(image,(0,0),fx=0.3,fy=0.3)
 
-
 def empty():
     pass
+
 #動態控制條
 #創建視窗
 cv2.namedWindow("tracker")
@@ -22,11 +21,8 @@ cv2.createTrackbar("SatMax","tracker",255,255,empty)
 cv2.createTrackbar("ValMin","tracker",0,255,empty)
 cv2.createTrackbar("ValMax","tracker",255,255,empty)
 
-
-
 #轉換顏色成hsv
 # hsv=cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
-
 while True:
     h_min=cv2.getTrackbarPos("HueMin","tracker")
     h_max=cv2.getTrackbarPos("HueMax","tracker")
