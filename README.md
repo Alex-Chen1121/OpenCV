@@ -3,14 +3,16 @@
 - 信用卡號辨識
 - 車流監控
 - 睡意檢測
+- 文檔ocr辨識
+- mediapipe手部追蹤
 
 ## 車流監控
-使用cv2.createBackgroundSubtractorKNN()區隔出動態物件
+1.使用cv2.createBackgroundSubtractorKNN()區隔出動態物件
 ``` python
 object_detector = cv2.createBackgroundSubtractorKNN()
 ```
 
-透過影片每幀圖片中的物件移動距離來判別是否為同一個物件
+2.透過影片每幀圖片中的物件移動距離來判別是否為同一個物件
 ``` python
 # 確認此物體是否已存在 或是新偵測到
       same_object_detected = False
@@ -28,6 +30,11 @@ object_detector = cv2.createBackgroundSubtractorKNN()
         objects_bbs_ids.append([x,y,w,h,self.id_count])
         self.id_count += 1
 ```
-## 功能展示
-
+### 功能展示
 ![](object_detect.png)
+
+## 文檔ocr辨識
+- step1.文檔圖片偏斜校正
+- step2.OCR掃描辨識
+### 功能展示
+![](demo_ocr_scanned.png)
