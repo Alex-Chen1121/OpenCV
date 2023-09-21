@@ -38,3 +38,18 @@ object_detector = cv2.createBackgroundSubtractorKNN()
 - step2.OCR掃描辨識
 ### 功能展示
 ![](demo_ocr_scanned.png)
+
+## Mediapipe手部追蹤
+- 成功偵測到手
+- 找出手部食指點位座標
+- 製作戳框小遊戲
+### 功能展示
+
+![](hands_detection.png)
+
+
+
+
+
+
+
