@@ -7,6 +7,10 @@
 - mediapipe手部追蹤
 
 ## 車流監控
+> 藉由監視畫面可以框選出移動的物體,
+> 若用在特定場景可以計算車流或人流,
+> 為了減少其他移動物體干擾有減小偵測區域
+
 1.使用cv2.createBackgroundSubtractorKNN()區隔出動態物件
 ``` python
 object_detector = cv2.createBackgroundSubtractorKNN()
@@ -34,6 +38,10 @@ object_detector = cv2.createBackgroundSubtractorKNN()
 ![](object_detect.png)
 
 ## 文檔ocr辨識
+> 若拍攝文件角度不是正的先執行偏斜校正,
+> 接著對影像進行二值化凸顯出文字部分,
+> 藉以提升ocr辨識正確率
+
 - step1.文檔圖片偏斜校正
 - step2.OCR掃描辨識
 ### 功能展示
