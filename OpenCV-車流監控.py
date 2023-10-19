@@ -43,7 +43,7 @@ class EuclideanDistTracker:
       center = self.center_points[object_id]
       new_center_points[object_id] = center
 
-    # 更新id字典
+    # 更新id資料
     self.center_points = new_center_points.copy()
     return objects_bbs_ids
 
